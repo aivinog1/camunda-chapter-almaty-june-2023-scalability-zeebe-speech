@@ -109,9 +109,9 @@ A short answer is no :)
 
 In some conditions you could get something like this:
 
-<div class="justify-center display-flex">
-   <Youtube id="QUCbAAkdPRE" width="450" height="250"></Youtube> 
-</div>
+<Transform scale="0.6">
+    <img src="https://i.imgflip.com/7pjekx.jpg">
+</Transform>
 
 ---
 
@@ -119,7 +119,7 @@ In some conditions you could get something like this:
 
 <style>
 div.mermaid {
-    width: 65%; 
+    width: 70%; 
     height: auto;
 }
 </style>
@@ -145,7 +145,7 @@ sequenceDiagram
         loop for each returned jobs 
             Poller-)Handler: Execute your code for each job asynchronously
             par Execute your business code
-                rect rgba(239, 0, 0, 0.62)
+                rect rgba(239, 0, 0, 0.35)
                     Note left of Handler: All stuff here executes in an async manner, i.e. later
                     Handler-)Async Stack: Execute business logic code in an async manner
                     Async Stack->>+Zeebe Gateway: Complete Job / Throw Error
